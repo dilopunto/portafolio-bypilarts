@@ -1,0 +1,37 @@
+/* ─────────────────────────────────────────────────────────────
+   TOKENS
+   Los colores (--tinta, --lila, --papel y sus mezclas) se generan
+   al compilar desde src/lib/palette.mjs y van ANTES de este archivo.
+   Tipografías: ver public/fonts/ (todas SIL OFL 1.1, servidas desde el propio sitio).
+   ───────────────────────────────────────────────────────────── */
+
+@font-face { font-family: "Inter"; src: url("../fonts/inter-400.woff") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/inter-500.woff") format("woff"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/inter-600.woff") format("woff"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Inter Display"; src: url("../fonts/inter-display-500.woff") format("woff"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Portfolio Serif"; src: url("../fonts/serif-roman-var.woff") format("woff"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Portfolio Serif"; src: url("../fonts/serif-italic-var.woff") format("woff"); font-weight: 400 700; font-style: italic; font-display: swap; }
+
+:root {
+  /* Tipografía */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter Display", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Portfolio Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --fs-lead: clamp(1.25rem, 1.02rem + 1vw, 2rem);
+  --fs-h2: clamp(2.25rem, 1.1rem + 4.8vw, 6rem);
+  --fs-h1: clamp(3.25rem, 1rem + 9.6vw, 11.5rem);
+
+  /* Espaciado y maquetación */
+  --gutter: clamp(1rem, 2.4vw, 2.25rem);
+  --w: min(calc(100% - 2 * var(--gutter)), 1680px);
+  --header-h: 4rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: clamp(3rem, 7vw, 6.5rem);
+  --space-6: clamp(4.5rem, 11vw, 10rem);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --radius: 999px;
+}
